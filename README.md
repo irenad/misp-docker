@@ -31,8 +31,12 @@ If not implementing SSL (not recommended) then simply comment out the appropriat
 ## Fetch files
 ```
 # git clone https://github.com/MISP/misp-docker
-# cd misp-docker
-docker build -t misp .
+# cd misp-web
+docker build -t misp-web .
+cd ../misp-procy
+docker build -t misp-proxy .
+cd ../misp-db
+docker build -t misp-db .
 ```
 ## Fix your environment
 Edit the docker-compose.yml and change the following environment variables:
